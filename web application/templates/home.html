@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MovieMatch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <style>
+           body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+        .bg {
+          /* The image used */
+          background-image: url("https://www.fanawards.com/sites/default/files/styles/blog/public/blog/bestpureflixmovies.jpg?itok=gO_Ayt6H");
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+   </style>
+</head>
+
+<body class="bg">
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+         <br><br><br><br><br><br>
+         <h1 style=" text-align: center; color:white; background-color: black">Movie Recommendation System</h1>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-3"> </div>
+        <div class="col-md-3">
+            <br><br><br><br><br>
+
+
+        <form class="form-horizontal" action="/" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <select name="my_select">
+                    <option selected disabled>Select a movie</option>
+                    {% for item in movie_titles %}
+                        <option value="{{ item }}">{{ item }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-3 col-sm-offset-7 ">
+                <button type="submit" class="btn btn-primary btn-sm">Get Recommendation</button>
+              </div>
+            </div>
+        </form>
+
+
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+
+
+
+
+
+
+<!--<div class="container">-->
+<!--  <h1 class="jumbotron bg-primary" style=" text-align: center; color:#000033">Chest X-ray Classfication for the detection of Pneumonia</h1>-->
+<!--  <br><br>-->
+<!--  <form class="form-horizontal" action="/" method="post" enctype="multipart/form-data">-->
+
+<!--    <div class="form-group">-->
+<!--      <label class="control-label col-sm-2 col-sm-offset-3" for="pwd" style="color:#f2f2f2"> Upload the X-ray:</label>-->
+<!--      <div class="col-sm-3">-->
+<!--        <input type="file" class="form-control" name="imagefile" id="pwd">-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--      <div class="col-sm-3 col-sm-offset-5 ">-->
+<!--        <button type="submit" class="btn btn-primary">GET RESULT</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div>-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MovieMatch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <style>
+           body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+        .bg {
+          /* The image used */
+          background-image: url("https://www.fanawards.com/sites/default/files/styles/blog/public/blog/bestpureflixmovies.jpg?itok=gO_Ayt6H");
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+   </style>
+</head>
+
+<body class="bg">
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+         <br><br><br><br><br><br>
+         <h1 style=" text-align: center; color:white; background-color: black">Movie Recommendation System</h1>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4"> </div>
+        <div class="col-md-3" style="color:white; background-color: black">
+           <br>
+            {% for movie in recommendations %}
+                {{ movie }}<br><hr>
+            {% endfor %}
+            <br>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+    <br>
+    <form class="form-horizontal" action="/" method="get" enctype="multipart/form-data">
+        <div class="form-group">
+          <div class="col-sm-offset-5 col-sm-5">
+            <button type="submit" class="btn btn-primary btn-sm">Back</button>
+          </div>
+        </div>
+    </form>
+
+
+
+</div>
+</body>
+</html>
